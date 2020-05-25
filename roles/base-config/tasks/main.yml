@@ -17,9 +17,9 @@
 ##  hostname:
 ##    name: "{{ inventory_hostname }}"
  
- - name: install base tools and packages
-   yum:
-     name:
-      - httpie
-      - python-pip
-     state: latest
+- name: install base tools and packages
+  yum:
+    name:
+     - httpie
+     - python-pip
+    state: latest
