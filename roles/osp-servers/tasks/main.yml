@@ -47,7 +47,7 @@
     name: "{{ item.key }}"
     image: rhel-guest
     meta: "{{ item.value.meta }}"
-    flavor: m2.small
+    flavor: m1.medium
     security_groups: "{{ item.value.security_group }}"
     key_name: ansible_ssh
     wait: yes
