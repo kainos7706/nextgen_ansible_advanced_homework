@@ -1,9 +1,0 @@
-export OSP_GUID=014a
-export OPENTLC_ID=toyi-redhat.com
-export OSP_DOMAIN=green.osp.opentlc.com
-export TOWER_GUID=51e4
-export OPENTLC_PASSWORD=dlghtjd77/TMY!@#
-export GITHUB_REPO=https://github.com/kainos7706/nextgen_ansible_advanced_homework
-export JQ_REPO_BASE=http://www.opentlc.com/download/ansible_bootcamp
-export REGION=us-east-1
-export MAIL_ID=toyi@redhat.com
