@@ -55,6 +55,7 @@
     - net-name: int_network
     userdata: |
       #cloud-config
+      ssh_pwauth: True
       chpasswd:
         list: |
           root:redhat
