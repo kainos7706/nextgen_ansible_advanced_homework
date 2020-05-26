@@ -59,6 +59,7 @@
         list: |
           root:redhat
           cloud-user:redhat
+        expire: False
   register: instanceip
   with_dict: "{{ osp_servers }}"
 
