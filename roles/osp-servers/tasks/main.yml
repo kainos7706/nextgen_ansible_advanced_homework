@@ -54,9 +54,6 @@
     nics:
     - net-name: int_network
     userdata: |
-      #! /bin/bash
-      curl -o /tmp/openstack.pub http://www.opentlc.com/download/ansible_bootcamp/openstack_keys/openstack.pub
-      cat /tmp/openstack.pub >> /home/cloud-user/.ssh/authorized_keys
       #cloud-config
       ssh_pwauth: True
       chpasswd:
@@ -85,6 +82,9 @@
           baseurl: http://admin.na.shared.opentlc.com/repos/ocp/3.6//rhel-7-server-optional-rpms
           enabled: 1
           gpgcheck: 0
+      runcmd:
+        - curl -o /tmp/openstack.pub http://www.opentlc.com/download/ansible_bootcamp/openstack_keys/openstack.pub
+        - cat /tmp/openstack.pub >> /home/cloud-user/.ssh/authorized_keys
   register: instanceip
   with_dict: "{{ osp_servers }}"
 
