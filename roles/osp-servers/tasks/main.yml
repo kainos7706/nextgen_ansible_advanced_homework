@@ -61,6 +61,27 @@
           root:redhat
           cloud-user:redhat
         expire: False
+      yum_repos:
+        rhel-7-server-rpms:
+          name: Red Hat Enterprise Linux 7
+          baseurl: http://admin.na.shared.opentlc.com/repos/ocp/3.6//rhel-7-server-rpms
+          enabled: 1
+          gpgcheck: 0
+        rhel-7-server-rh-common-rpms:
+          name: Red Hat Enterprise Linux 7 Common
+          baseurl: http://admin.na.shared.opentlc.com/repos/ocp/3.6//rhel-7-server-rh-common-rpms
+          enabled: 1
+          gpgcheck: 0
+        rhel-7-server-extras-rpms:
+          name: Red Hat Enterprise Linux 7 Extras
+          baseurl: http://admin.na.shared.opentlc.com/repos/ocp/3.6//rhel-7-server-extras-rpms
+          enabled: 1
+          gpgcheck: 0
+        rhel-7-server-optional-rpms:
+          name: Red Hat Enterprise Linux 7 Optional
+          baseurl: http://admin.na.shared.opentlc.com/repos/ocp/3.6//rhel-7-server-optional-rpms
+          enabled: 1
+          gpgcheck: 0
   register: instanceip
   with_dict: "{{ osp_servers }}"
 
